@@ -37,7 +37,7 @@ def knn_predict_all(x_train, y_train, x_test, k):
         y_pred.append(pred)
     return np.array(y_pred)
 
-y_test_predict = knn_predict_all(x_train, y_train, x_test, k=10)
+y_test_predict = knn_predict_all(x_train, y_train, x_test[:20], k=10)
 
 for i in range(20):
     image = test.iloc[i].values.reshape(28, 28)
